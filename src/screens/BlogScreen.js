@@ -1,6 +1,6 @@
 import React from "react";
 import blogs from "../data/blogs";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const BlogScreen = () => {
   return (

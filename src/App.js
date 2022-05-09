@@ -6,17 +6,19 @@ import HomeScreen from "./screens/HomeScreen";
 import BlogScreen from "./screens/BlogScreen";
 import AboutScreen from "./screens/AboutScreen";
 
+import { Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <>
+    <Container fluid className="gx-0">
       <Header />
-      <main>
-        <Container>
-          <AboutScreen />
-        </Container>
-      </main>
+      <Routes>
+        <Route path="/home" exact element={<HomeScreen />} />
+        <Route path="/blogs" exact element={<BlogScreen />} />
+        <Route path="/about" exact element={<AboutScreen />} />
+      </Routes>
       <Footer />
-    </>
+    </Container>
   );
 }
 

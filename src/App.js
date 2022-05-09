@@ -12,11 +12,13 @@ function App() {
   return (
     <Container fluid className="gx-0">
       <Header />
-      <Routes>
-        <Route path="/home" exact element={<HomeScreen />} />
-        <Route path="/blogs" exact element={<BlogScreen />} />
-        <Route path="/about" exact element={<AboutScreen />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/home" exact element={<HomeScreen />} />
+          <Route path="/blogs" exact element={<BlogScreen />} />
+          <Route path="/about" exact element={<AboutScreen />} />
+        </Routes>
+      </main>
       <Footer />
     </Container>
   );

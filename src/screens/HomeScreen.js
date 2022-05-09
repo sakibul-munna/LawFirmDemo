@@ -6,7 +6,7 @@ import Slider from "../components/Slider";
 
 const HomeScreen = () => {
   return (
-    <Container fluid className="gx-0">
+    <Container>
       <div
         style={{
           display: "flex",

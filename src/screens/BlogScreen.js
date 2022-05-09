@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 
 const BlogScreen = () => {
   return (
-    <Container fluid className="gx-0 my-3 py-3">
+    <Container className="my-3 py-3">
       {blogs.map((blog) => (
         <div>
           <h3>{blog.title}</h3>

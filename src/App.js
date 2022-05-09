@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import HomeScreen from "./screens/HomeScreen";
 import BlogScreen from "./screens/BlogScreen";
 import AboutScreen from "./screens/AboutScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/home" exact element={<HomeScreen />} />
           <Route path="/blogs" exact element={<BlogScreen />} />
           <Route path="/about" exact element={<AboutScreen />} />
+          <Route path="/login" exact element={<LoginScreen />} />
         </Routes>
       </main>
       <Footer />

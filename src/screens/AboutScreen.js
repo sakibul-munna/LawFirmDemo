@@ -1,8 +1,9 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 const AboutScreen = () => {
   return (
-    <div className="py-3">
+    <Container className="py-3">
       <div
         style={{
           display: "flex",
@@ -57,7 +58,7 @@ const AboutScreen = () => {
           Besides this, i learn my many things from Edx and Udemy.
         </p>
       </div>
-    </div>
+    </Container>
   );
 };
 

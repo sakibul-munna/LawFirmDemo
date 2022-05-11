@@ -33,7 +33,9 @@ const Header = () => {
               <LinkContainer to="/blogs">
                 <Nav.Link href="blogs">Blogs</Nav.Link>
               </LinkContainer>
-              <Nav.Link href="checkout">Checkout</Nav.Link>
+              <LinkContainer to="/checkout">
+                <Nav.Link href="checkout">Checkout</Nav.Link>
+              </LinkContainer>
             </Nav>
             <Nav>
               <LinkContainer to="/about">

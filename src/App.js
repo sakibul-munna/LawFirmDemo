@@ -15,7 +15,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/home" exact element={<HomeScreen />} />
+          <Route path="/" exact element={<HomeScreen />} />
           <Route path="/blogs" exact element={<BlogScreen />} />
           <Route path="/about" exact element={<AboutScreen />} />
           <Route path="/login" exact element={<LoginScreen />} />

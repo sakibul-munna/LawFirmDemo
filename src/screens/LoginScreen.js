@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Form, Button, Container, Card } from "react-bootstrap";
 import "./LoginScreen.css";
+import { useAuth } from "../contexts/authContext";
+import { useNavigate } from "react-router-dom";
 
 const LoginScreen = () => {
+  const emailRef = useRef();
+  const passwordRef = useRef();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { logIn } = useAuth();
+  const navigate = useNavigate();
 
-  const submitHandler = () => {};
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    await logIn(emailRef.current.value, passwordRef.current.value);
+    navigate("/");
+  };
 
   return (
     <Container
@@ -32,6 +42,7 @@ const LoginScreen = () => {
                 </Form.Label>
                 <Form.Control
                   value={email}
+                  ref={emailRef}
                   type="email"
                   required
                   placeholder="Enter Email"
@@ -45,6 +56,7 @@ const LoginScreen = () => {
                 </Form.Label>
                 <Form.Control
                   value={password}
+                  ref={passwordRef}
                   type="password"
                   required
                   placeholder="Enter Password"
